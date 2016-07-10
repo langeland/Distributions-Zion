@@ -1,0 +1,21 @@
+
+
+-
+  name: 'Device: register'
+  uriPattern: 'device/{id}'
+  defaults:
+    '@package':    'Langeland.Zion'
+    '@controller': 'Device'
+    '@action':     'register'
+    '@format':     'json'
+  httpMethods: ['PUT']
+
+-
+  name: 'DeviceNotification: insert'
+  uriPattern: 'device/{deviceGuid}/notification'
+  defaults:
+    '@package':    'Langeland.Zion'
+    '@controller': 'DeviceNotification'
+    '@action':     'insert'
+    '@format':     'json'
+  httpMethods: ['POST']

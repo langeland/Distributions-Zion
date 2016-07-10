@@ -1,0 +1,44 @@
+
+TYPO3:
+  Flow:
+    security:
+      authentication:
+        authenticationStrategy: oneToken
+        providers:
+          OpauthProvider:
+            provider: 'Hfrahmann\Opauth\Authentication\OpauthProvider'
+            entryPoint: 'WebRedirect'
+            entryPointOptions:
+              routeValues:
+                '@package':    'Langeland.BasePort'
+                '@controller': 'Standard'
+                '@action':     'noAccess'
+                '@format':     'html'
+
+Hfrahmann:
+  Opauth:
+    authenticationControllerRoute:
+      '@package': 'Langeland.BasePort'
+      '@subpackage': ''
+      '@controller': 'Authentication'
+    defaultRoleIdentifier: 'Langeland.BasePort:AuthenticatedUser'
+    authenticationProviderName: 'OpauthProvider'
+    securitySalt: 'acxtDWHW3jVZGsKXjcCQvKsUnmnfA4nZbEjRouVfY7HwVwqRV8RMspdhXidECvbi'
+
+    strategies:
+      Facebook:
+        app_id: '571xxxxxxxxxxx'
+        app_secret: '3daxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+        scope: 'email,read_friendlists' # optional
+
+      Twitter:
+        key: 'T6fxxxxxxxxxxxxxxxxxx'
+        secret: 'Qqvxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+
+      GitHub:
+        client_id: '371xxxxxxxxxxxxxxxxx'
+        client_secret: '474xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+
+      Google:
+        client_id: '454xxxxxxxxx-2a8xxxxxxxxxxxxxxxxxxxxxxxxxxxxx.apps.googleusercontent.com'
+        client_secret: 'kv-xxxxxxxxxxxxxxxx'

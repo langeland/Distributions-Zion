@@ -1,0 +1,23 @@
+
+# This route is necessary.
+
+-
+  name: 'Opauth - Strategy-Login'
+  uriPattern: 'opauth/{strategy}(/{internalcallback})'
+  defaults:
+    '@package': 'Langeland.BasePort'
+    '@controller': 'Authentication'
+    '@action': 'opauth' # don't change
+    '@format': 'html'
+    'internalcallback': '' # important
+  appendExceedingArguments: true
+
+
+-
+  name: 'index'
+  uriPattern: ''
+  defaults:
+    '@package':    'Langeland.BasePort'
+    '@controller': 'Standard'
+    '@action':     'index'
+    '@format':     'html'

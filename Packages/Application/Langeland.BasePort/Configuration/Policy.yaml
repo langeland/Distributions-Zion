@@ -1,0 +1,18 @@
+#                                                                        #
+# This file is part of the Langeland.BasePort package.      #
+#                                                                        #
+
+privilegeTargets:
+
+  'TYPO3\Flow\Security\Authorization\Privilege\Method\MethodPrivilege':
+    'Langeland.BasePort:StandardController.restrictedActions':
+      matcher: 'method(Langeland\BasePort\Controller\StandardController->testAction())'
+
+
+roles:
+  'Langeland.BasePort:AuthenticatedUser':
+    privileges:
+      -
+        privilegeTarget: 'Langeland.BasePort:StandardController.restrictedActions'
+        permission: GRANT
+

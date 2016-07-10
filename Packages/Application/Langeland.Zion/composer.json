@@ -1,0 +1,18 @@
+{
+    "description": "",
+    "type": "neos-package",
+    "name": "langeland/zion",
+    "require": {
+        "typo3/flow": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Langeland\\Zion": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Langeland.Zion"
+        }
+    }
+}

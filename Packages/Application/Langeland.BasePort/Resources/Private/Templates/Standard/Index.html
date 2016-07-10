@@ -1,0 +1,27 @@
+{namespace opauth=Hfrahmann\Opauth\ViewHelpers}
+
+<f:layout name="BootstrapSignin"/>
+
+<f:section name="Title">Overview</f:section>
+
+<f:section name="Content">
+
+    <h1 class="cover-heading">Cover the net.</h1>
+
+    <f:security.ifAuthenticated>
+        <f:then>
+            <p class="lead">This is where you get out..</p>
+
+            <p class="lead">
+                <f:link.action class="btn btn-lg btn-default" action="logout" controller="Authentication">Logout</f:link.action>
+            </p>
+        </f:then>
+        <f:else>
+            <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+
+            <p class="lead">
+                <a class="btn btn-lg btn-primary" href="{opauth:opauthStrategyUri(strategy:'github')}">GitHub Login</a> <a class="btn btn-lg btn-primary" href="{opauth:opauthStrategyUri(strategy:'google')}">Google Login</a>
+            </p>
+        </f:else>
+    </f:security.ifAuthenticated>
+</f:section>

@@ -1,0 +1,9 @@
+Flowpack:
+  ElasticSearch:
+    clients:
+      default:
+        -
+          host: localhost
+          port: 9200
+    transfer:
+      connectionTimeout: 5
