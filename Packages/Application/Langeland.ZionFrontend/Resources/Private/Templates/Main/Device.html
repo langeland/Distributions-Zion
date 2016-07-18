@@ -1,0 +1,15 @@
+<f:layout name="Default"/>
+
+<f:section name="Title">Index view of Main controller</f:section>
+
+<f:section name="Content">
+    <h1>Devices: {device.identifier}</h1>
+    <h2>
+        <f:if condition="{device.name}">
+            <f:then>{device.name}</f:then>
+            <f:else>{device.deviceClass.name} (from deviceClass)</f:else>
+        </f:if>
+    </h2>
+    <f:debug>{device.deviceClass.equipment}</f:debug>
+
+</f:section>

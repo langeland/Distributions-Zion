@@ -1,0 +1,17 @@
+-
+  name: 'Frontend: index'
+  uriPattern: ''
+  defaults:
+    '@package':    'Langeland.ZionFrontend'
+    '@controller': 'Main'
+    '@action':     'index'
+    '@format':     'html'
+
+-
+  name: 'Frontend: show'
+  uriPattern: 'device/{device}'
+  defaults:
+    '@package':    'Langeland.ZionFrontend'
+    '@controller': 'Main'
+    '@action':     'device'
+    '@format':     'html'

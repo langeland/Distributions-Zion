@@ -1,0 +1,33 @@
+<f:layout name="Default"/>
+
+<f:section name="Title">Index view of Main controller</f:section>
+
+<f:section name="Content">
+    <h1>A freshly created Fluid template!</h1>
+
+    <p>Some data set by the controller:</p>
+
+    <f:for each="{devices}" as="device">
+        <div>
+            <h2>
+                {device.identifier}
+                <f:link.action action="device" arguments="{device: device}" class="btn btn-primary">View</f:link.action>
+            </h2>
+
+            <ul>
+                <li>
+                    Name:
+                    <f:if condition="{device.name}">
+                        <f:then>{device.name}</f:then>
+                        <f:else>{device.deviceClass.name} (from deviceClass)</f:else>
+                    </f:if>
+                </li>
+                <li>
+                    Last seen: {device.lastDeviceNotification.timestamp -> f:format.date(forceLocale: 'da_DK')}
+                </li>
+            </ul>
+            <f:debug>{device.lastDeviceNotification.timestamp -> f:format.date(forceLocale: 'da_DK')}</f:debug>
+
+        </div>
+    </f:for>
+</f:section>

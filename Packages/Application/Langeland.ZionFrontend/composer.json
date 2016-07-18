@@ -1,0 +1,18 @@
+{
+    "description": "",
+    "type": "neos-package",
+    "name": "langeland/zionfrontend",
+    "require": {
+        "typo3/flow": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Langeland\\ZionFrontend": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Langeland.ZionFrontend"
+        }
+    }
+}
