@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e10619165b58fc563f969d504623537a",
-    "content-hash": "9b93e1c26412765132d4e6da53547df9",
+    "hash": "016b509a6d2d9ba703d3946198adf985",
+    "content-hash": "7826d0df473b3340d5c0dfa5d8de72c9",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -620,21 +620,21 @@
         },
         {
             "name": "flowpack/elasticsearch",
-            "version": "1.1.2",
+            "version": "1.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Flowpack/Flowpack.ElasticSearch.git",
-                "reference": "e43f3f8245186f724c51b15788e7026300a36b84"
+                "reference": "09abd07489aab39fb8644e5034abea075c76e675"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Flowpack/Flowpack.ElasticSearch/zipball/e43f3f8245186f724c51b15788e7026300a36b84",
-                "reference": "e43f3f8245186f724c51b15788e7026300a36b84",
+                "url": "https://api.github.com/repos/Flowpack/Flowpack.ElasticSearch/zipball/09abd07489aab39fb8644e5034abea075c76e675",
+                "reference": "09abd07489aab39fb8644e5034abea075c76e675",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
-                "typo3/flow": "*"
+                "typo3/flow": "~2.3|~3.0"
             },
             "type": "typo3-flow-package",
             "autoload": {
@@ -643,8 +643,11 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-            "description": "This package provides wrapper functionality for the elasticsearch engine.",
-            "time": "2016-02-19 17:00:35"
+            "license": [
+                "MIT"
+            ],
+            "description": "This package provides wrapper functionality for the Elasticsearch engine.",
+            "time": "2016-07-12 10:38:04"
         },
         {
             "name": "hfrahmann/opauth",
@@ -1861,16 +1864,16 @@
         },
         {
             "name": "typo3/party",
-            "version": "3.1.2",
+            "version": "3.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/neos/party.git",
-                "reference": "d232f1d22ef52ef9144f5a2d10e121604f72fa51"
+                "reference": "7c47321aa391406ac3acb47f41d0cb971aba2b5b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/neos/party/zipball/d232f1d22ef52ef9144f5a2d10e121604f72fa51",
-                "reference": "d232f1d22ef52ef9144f5a2d10e121604f72fa51",
+                "url": "https://api.github.com/repos/neos/party/zipball/7c47321aa391406ac3acb47f41d0cb971aba2b5b",
+                "reference": "7c47321aa391406ac3acb47f41d0cb971aba2b5b",
                 "shasum": ""
             },
             "require": {
@@ -1887,7 +1890,7 @@
                 "LGPL-3.0+"
             ],
             "description": "A PHP implementation of the OASIS Customer Information Quality (CIQ) XML Standard.",
-            "time": "2016-05-27 08:43:37"
+            "time": "2016-06-28 08:44:42"
         },
         {
             "name": "zendframework/zend-code",
@@ -1998,6 +2001,55 @@
     ],
     "packages-dev": [
         {
+            "name": "symfony/process",
+            "version": "v2.8.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/process.git",
+                "reference": "89f33c16796415ccfd8bb3cf8d520cbb79899bfe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/process/zipball/89f33c16796415ccfd8bb3cf8d520cbb79899bfe",
+                "reference": "89f33c16796415ccfd8bb3cf8d520cbb79899bfe",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.8-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Process\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Process Component",
+            "homepage": "https://symfony.com",
+            "time": "2016-06-29 05:29:29"
+        },
+        {
             "name": "typo3/kickstart",
             "version": "3.2.4",
             "source": {
@@ -2026,6 +2078,42 @@
             ],
             "description": "A simple generator for controller and views.",
             "time": "2016-04-28 20:34:57"
+        },
+        {
+            "name": "typo3/surf",
+            "version": "0.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TYPO3/Surf.git",
+                "reference": "952ad24b37bb107b2399f6a7eef85598ad493faf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TYPO3/Surf/zipball/952ad24b37bb107b2399f6a7eef85598ad493faf",
+                "reference": "952ad24b37bb107b2399f6a7eef85598ad493faf",
+                "shasum": ""
+            },
+            "require": {
+                "symfony/process": "~2.1",
+                "typo3/flow": "*"
+            },
+            "type": "typo3-flow-package",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.9.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "TYPO3\\Surf": "Classes"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0+"
+            ],
+            "description": "TYPO3 Surf is a deployment tool based on Flow and suited for a wide variety of applications",
+            "time": "2015-10-05 23:04:28"
         }
     ],
     "aliases": [],
